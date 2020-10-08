@@ -1,0 +1,110 @@
+body
+{
+ background-image: url("Images/back.jpg");
+}
+
+.navbar
+{
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left
+{
+    display: flex;
+    color: white;
+    padding-left: 10px;
+}
+
+.navbar > .left > div
+{
+    margin: 20px;
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+.navbar > .left > div > a:hover
+{
+    color: aqua;
+    transition: 0.5s;
+}
+
+.nav-link-wrapper
+{
+    border-bottom: 1px soild transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.right div
+{
+   margin-right: 20px;
+}
+
+.search_bar
+{
+    position: relative;
+}
+
+.search_box
+{
+    border-radius: 10px;
+    border-width: 5px;
+    text-align: right;
+    background-color: transparent;
+    font-size: x-large;
+    border: solid transparent;
+    border-color: white;
+    
+}
+
+.search_box::placeholder
+{
+    color: white;
+    font-size: x-large;
+}
+
+.options
+{
+    position: relative;
+}
+
+.options > div > label
+{
+    font-size: x-large;
+    color: white;
+}
+
+.main
+{
+    text-transform: uppercase;
+    font-size: x-large;
+}
+
+.main > div > a
+{
+    margin-left: 2%;
+    color: white;
+    text-decoration: none;
+}
+
+.sample
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-left: 5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.sample img
+{
+    width: 100px;
+    height: 150px;
+}
