@@ -1,7 +1,6 @@
 const gutendex = require("../api/gutendex");
 
 exports.getSearch = async (req, res, next) => {
-  console.log(req.query);
   try {
     const response = await gutendex.get("/books", {
       params: {
@@ -9,8 +8,8 @@ exports.getSearch = async (req, res, next) => {
       },
     });
 
-    const searchResults = response.data;
-    res.render("search", { title: "Search results", searchResults });
+    const searchResponse = response.data;
+    res.render("search", { title: "Search results", searchResponse });
   } catch (error) {
     console.log(error);
   }

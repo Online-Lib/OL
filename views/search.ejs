@@ -7,6 +7,9 @@
 <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	search
+	<h1>Search results page</h1>
+	<% searchResponse.results.forEach(book=>{ %>
+		<h3><%=book.title%></h3>
+	<% }) %>
 </body>
 </html>
