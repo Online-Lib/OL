@@ -12,6 +12,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(userRoutes)
 
+
 app.get('/ping', (req, res, next)=> {
 	res.render('ping', {title:'Pong!'})
 })
