@@ -4,6 +4,23 @@ This project's objective is to create an website that allows users to browse and
 
 ## gutendex api documentation - https://gutendex.com/
 
+## How to use
+
+* install dependencies
+
+``npm install
+``
+
+* how to start
+
+``npm start
+``
+
+* how to test
+
+``npm test
+``
+
 ## Endpoints
 
 ---
@@ -16,5 +33,24 @@ This project's objective is to create an website that allows users to browse and
 ##### Example
 
 > /search?query=mind
+
+
+#### Login
+
+> /login GET
+> /signup POST (body: email, password)
+
+##### Example
+
+> 
+
+#### Signup
+
+> /signup GET
+> /signup POST (body: email, password)
+
+##### Example
+
+> 
 
 ---
