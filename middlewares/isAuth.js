@@ -9,7 +9,9 @@ module.exports = {
         if (req.isAuthenticated()) {
             next()
         }
-        res.redirect('/login')
+        else {
+            res.redirect('/login')
+        }
     },
     /**
      * Check if user is login then forward the user to another route without login
@@ -21,6 +23,8 @@ module.exports = {
         if (!req.isAuthenticated()) {
             next()
         }
-        res.redirect('/')
+        else {
+            res.redirect('/')
+        }
     }
 }
