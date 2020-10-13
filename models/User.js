@@ -5,12 +5,14 @@ const { hashPassword, comparePassword } = require('../helpers/bcrypt')
 const userSchema = mongoose.Schema({
     email: {
         type: String,
-        require: true,
         index: true,
         unique: true
     },
     username: String,
-    password: String
+    password: String,
+    googleId: String,
+    provider: String,
+    name: String
 })
 
 //Unique email verify

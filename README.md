@@ -53,4 +53,14 @@ This project's objective is to create an website that allows users to browse and
 
 > 
 
+#### Google login
+
+> /auth/google GET
+
+#### Google login requirement
+
+* Google client id
+
+* Google client secret
+
 ---
