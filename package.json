@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon NODE_ENV=development server.js",
+    "dev": "prettier --write . && nodemon NODE_ENV=development server.js",
     "test": "mocha './test/**/*.test.js'",
     "prettier": "prettier --write .",
     "prettier:check": "prettier check ."
