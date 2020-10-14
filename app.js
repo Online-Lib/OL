@@ -5,6 +5,7 @@ const session = require("express-session")
 const authRoutes = require("./routes/auth")
 const userRoutes = require("./routes/user")
 const passport = require("passport")
+
 const app = express()
 
 require("./security/passport")

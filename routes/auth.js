@@ -31,7 +31,7 @@ router.post(
   "/login",
   passport.authenticate("local", { failureRedirect: "/login" }),
   function (req, res) {
-    res.redirect("/secret")
+    res.redirect("/")
   }
 )
 
@@ -45,7 +45,18 @@ router.get(
   passport.authenticate("google", { failureRedirect: "/login" }),
   function (req, res) {
     // Successful authentication, redirect home.
-    res.redirect("/")
+    res.redirect("/secret")
+  }
+)
+
+router.get("/auth/facebook", passport.authenticate("facebook"))
+
+router.get(
+  "/auth/facebook/callback",
+  passport.authenticate("facebook", { failureRedirect: "/login" }),
+  function (req, res) {
+    // Successful authentication, redirect home.
+    res.redirect("/secret")
   }
 )
 
