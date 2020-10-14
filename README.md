@@ -18,6 +18,14 @@ This project's objective is to create an website that allows users to browse and
 
 `npm test `
 
+- format all files
+
+`npm prettier`
+
+- check format all files
+
+`npm prettier:check`
+
 ## Endpoints
 
 ---

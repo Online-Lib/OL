@@ -3,6 +3,7 @@ const uniqueValidator = require("mongoose-unique-validator")
 const { hashPassword, comparePassword } = require("../helpers/bcrypt")
 const findOrCreate = require("mongoose-findorcreate")
 
+
 const userSchema = mongoose.Schema({
   email: {
     type: String,
@@ -32,5 +33,7 @@ userSchema.pre("save", async function (next) {
   // generate a salt
   next()
 })
+
 userSchema.plugin(findOrCreate)
+
 module.exports = mongoose.model("User", userSchema)
