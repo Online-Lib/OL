@@ -6,20 +6,17 @@ This project's objective is to create an website that allows users to browse and
 
 ## How to use
 
-* install dependencies
+- install dependencies
 
-``npm install
-``
+`npm install `
 
-* how to start
+- how to start
 
-``npm start
-``
+`npm start `
 
-* how to test
+- how to test
 
-``npm test
-``
+`npm test `
 
 ## Endpoints
 
@@ -34,7 +31,6 @@ This project's objective is to create an website that allows users to browse and
 
 > /search?query=mind
 
-
 #### Login
 
 > /login GET
@@ -42,7 +38,7 @@ This project's objective is to create an website that allows users to browse and
 
 ##### Example
 
-> 
+>
 
 #### Signup
 
@@ -51,7 +47,7 @@ This project's objective is to create an website that allows users to browse and
 
 ##### Example
 
-> 
+>
 
 #### Google login
 
@@ -59,8 +55,8 @@ This project's objective is to create an website that allows users to browse and
 
 #### Google login requirement
 
-* Google client id
+- Google client id
 
-* Google client secret
+- Google client secret
 
 ---
