@@ -1,1 +1,1 @@
-module.exports.mongoose = require('mongoose')
+module.exports.mongoose = require("mongoose")
