@@ -4,7 +4,7 @@
     <head>
         <title>Online Library</title>
     </head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <body>
         <div class="container">
             <div class="navbar">
@@ -28,20 +28,26 @@
 
                 <div class="right">
                     <div class="search_bar">
-                        <input type="text" name="search" id="search" class="search_box" placeholder="Search">
+                        <input
+                            type="text"
+                            name="search"
+                            id="search"
+                            class="search_box"
+                            placeholder="Search"
+                        />
                     </div>
-                    <br>
+                    <br />
                     <div class="options">
                         <div class="title">
-                            <input type="radio" name="title" id="title">
+                            <input type="radio" name="title" id="title" />
                             <label for="title">Title</label>
                         </div>
                         <div class="author">
-                            <input type="radio" name="author" id="author">
+                            <input type="radio" name="author" id="author" />
                             <label for="author">Author</label>
                         </div>
                         <div class="isbn">
-                            <input type="radio" name="isbn" id="isbn">
+                            <input type="radio" name="isbn" id="isbn" />
                             <label for="isbn">ISBN</label>
                         </div>
                         <div class="genre">
@@ -50,7 +56,9 @@
                                 <option value="fiction">Fiction</option>
                                 <option value="nonfiction">Non-fiction</option>
                                 <option value="sci-fi">Science Fiction</option>
-                                <option value="hist-fic">Historical Fiction</option>
+                                <option value="hist-fic">
+                                    Historical Fiction
+                                </option>
                                 <option value="mystery">Mystery</option>
                             </select>
                         </div>
@@ -60,52 +68,52 @@
             <div class="main">
                 <div class="popular">
                     <a href="#">Popular Reads</a>
-                    <br>
+                    <br />
                     <div class="sample">
-                        <img src="Images/book.jpg" alt="">
-                        <img src="Images/book.jpg" alt="">
-                        <img src="Images/book.jpg" alt="">
-                        <img src="Images/book.jpg" alt="">
-                        <img src="Images/book.jpg" alt="">
-                        <img src="Images/book.jpg" alt="">
-                        <img src="Images/book.jpg" alt="">
-                        <img src="Images/book.jpg" alt="">
+                        <img src="Images/book.jpg" alt="" />
+                        <img src="Images/book.jpg" alt="" />
+                        <img src="Images/book.jpg" alt="" />
+                        <img src="Images/book.jpg" alt="" />
+                        <img src="Images/book.jpg" alt="" />
+                        <img src="Images/book.jpg" alt="" />
+                        <img src="Images/book.jpg" alt="" />
+                        <img src="Images/book.jpg" alt="" />
                     </div>
                 </div>
                 <div class="newest">
                     <a href="#">Newest Additions</a>
-                    <br>
+                    <br />
                     <div class="sample">
-                        <img src="Images/book.jpg" alt="">
-                        <img src="Images/book.jpg" alt="">
-                        <img src="Images/book.jpg" alt="">
-                        <img src="Images/book.jpg" alt="">
-                        <img src="Images/book.jpg" alt="">
-                        <img src="Images/book.jpg" alt="">
-                        <img src="Images/book.jpg" alt="">
-                        <img src="Images/book.jpg" alt="">
+                        <img src="Images/book.jpg" alt="" />
+                        <img src="Images/book.jpg" alt="" />
+                        <img src="Images/book.jpg" alt="" />
+                        <img src="Images/book.jpg" alt="" />
+                        <img src="Images/book.jpg" alt="" />
+                        <img src="Images/book.jpg" alt="" />
+                        <img src="Images/book.jpg" alt="" />
+                        <img src="Images/book.jpg" alt="" />
                     </div>
                 </div>
                 <div class="recommended">
                     <a href="#">Recommened</a>
-                    <br>
+                    <br />
                     <div class="sample">
-                        <img src="Images/book.jpg" alt="">
-                        <img src="Images/book.jpg" alt="">
-                        <img src="Images/book.jpg" alt="">
-                        <img src="Images/book.jpg" alt="">
-                        <img src="Images/book.jpg" alt="">
-                        <img src="Images/book.jpg" alt="">
-                        <img src="Images/book.jpg" alt="">
-                        <img src="Images/book.jpg" alt="">
+                        <img src="Images/book.jpg" alt="" />
+                        <img src="Images/book.jpg" alt="" />
+                        <img src="Images/book.jpg" alt="" />
+                        <img src="Images/book.jpg" alt="" />
+                        <img src="Images/book.jpg" alt="" />
+                        <img src="Images/book.jpg" alt="" />
+                        <img src="Images/book.jpg" alt="" />
+                        <img src="Images/book.jpg" alt="" />
                     </div>
                 </div>
             </div>
         </div>
-         <div class="form">
-        <h3>Registration</h3>
-        <form action="">
-            <!-- 
+        <div class="form">
+            <h3>Registration</h3>
+            <form action="">
+                <!-- 
             <label for="firstname" id="firstname">Firstname:</label>
             <input type="text" name="firstname" id="firstname">
             <label for="lastname" id="lastname" aria-required="true">Lastname:</label>
@@ -126,14 +134,31 @@
             </div>
             <button name="submit" value="submit">Register</button>
         -->
-        <p>Username:</p>
-        <input type="text" name="username" id="username" placeholder="Username" >
-        <p>Email:</p>
-        <input type="email" name="email" id="email" placeholder="Email">
-        <p>Password:</p>
-        <input type="password" name="password" id="password" placeholder="Password">
-        <button type="submit" name="submit" id="submit">Register</button>
-        </form>
-    </div>
+                <p>Username:</p>
+                <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    placeholder="Username"
+                />
+                <p>Email:</p>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                />
+                <p>Password:</p>
+                <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Password"
+                />
+                <button type="submit" name="submit" id="submit">
+                    Register
+                </button>
+            </form>
+        </div>
     </body>
 </html>
