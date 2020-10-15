@@ -32,4 +32,8 @@ app.get("/ping", (req, res, next) => {
   res.render("ping", { title: "Pong!" })
 })
 
+app.get("*", (req, res, next) => {
+  res.render("404", { title: "Page not found" })
+})
+
 module.exports = app
