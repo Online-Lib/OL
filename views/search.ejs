@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><%=title%></title>
-<link rel="stylesheet" href="css/main.css">
+<%- include('includes/head.ejs') %>
 </head>
 <body>
 	<h1>Search results page</h1>
+	<h2>Total results found : <%=searchResponse.count%></h2>
 	<% searchResponse.results.forEach(book=>{ %>
 		<h3><%=book.title%></h3>
 	<% }) %>
-</body>
-</html>
+
+	<!-- pagination  -->
+	<% if (searchResponse.previous) { %>
+		<a href="?page=<%= parseInt(page)-1 %>&query=<%= search %>">Previous</a>
+	<% } if(searchResponse.next) { %>
+		<a href="?page=<%= parseInt(page)+1 %>&query=<%= search %>">Next</a>
+	<% } %> 
+	<%- include('includes/footer.ejs') %>

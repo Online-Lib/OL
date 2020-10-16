@@ -3,7 +3,6 @@ const uniqueValidator = require("mongoose-unique-validator")
 const { hashPassword, comparePassword } = require("../helpers/bcrypt")
 const findOrCreate = require("mongoose-findorcreate")
 
-
 const userSchema = mongoose.Schema({
   email: {
     type: String,

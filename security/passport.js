@@ -9,7 +9,6 @@ const {
   GOOGLE_CLIENT_SECRET,
   FACEBOOK_CLIENT_ID,
   FACEBOOK_CLIENT_SECRET,
-
 } = require("../configs/env.config")
 /**
  * Use local stategy with username and password
@@ -87,7 +86,6 @@ passport.use(
         },
         function (err, user) {
           return cb(err, user)
-
         }
       )
     }
