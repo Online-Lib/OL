@@ -4,6 +4,7 @@ const path = require("path")
 const session = require("express-session")
 const authRoutes = require("./routes/auth")
 const userRoutes = require("./routes/user")
+const booksRoute = require("./routes/books")
 const passport = require("passport")
 
 const app = express()
@@ -27,6 +28,7 @@ app.use(passport.session())
 
 app.use(authRoutes)
 app.use(userRoutes)
+app.use("/book", booksRoute)
 
 app.get("/ping", (req, res, next) => {
   res.render("ping", { title: "Pong!" })
