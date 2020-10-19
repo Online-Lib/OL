@@ -12,6 +12,7 @@ exports.getSearch = async (req, res, next) => {
     })
 
     const searchResponse = response.data
+
     res.render("search", {
       title: "Search results",
       searchResponse,
