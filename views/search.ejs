@@ -1,6 +1,7 @@
 <%- include('includes/head.ejs') %>
 </head>
 <body>
+	<%- include('includes/navbar.ejs') %>
 	<h1>Search results page</h1>
 	<h2>Total results found : <%=searchResponse.count%></h2>
 	<% searchResponse.results.forEach(book=>{ %>
