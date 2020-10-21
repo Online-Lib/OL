@@ -1,22 +1,2 @@
 body {
 }
-
-.cards-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.cards-wrapper .card {
-  margin: 25px;
-}
-
-.cards-wrapper .card .author {
-  font-size: 18px;
-}
-.cards-wrapper .card .tags {
-  margin-top: 10px;
-}
-.cards-wrapper .card .tags p {
-  font-size: 13px;
-  padding: 2px 6px;
-}
