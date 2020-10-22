@@ -1,13 +1,16 @@
 .cards-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .cards-wrapper .card {
   margin: 25px;
+  width: 270px;
 }
-.card image {
-  height: 30px;
+
+.cards-wrapper .card .image {
+  height: 300px;
 }
 
 .cards-wrapper .card .author {
