@@ -1,43 +1,47 @@
 <%- include('includes/head.ejs') %>
 <link rel="stylesheet" href="css/cards.css">
 </head>
+
 <body>
 	<%- include('includes/navbar.ejs') %>
+
 	<h1>Search results page</h1>
 	<h2>Total results found : <%=searchResponse.count%></h2>
 	<div class="cards-wrapper">
-	<% searchResponse.results.forEach(book=>{ %>
-	<div class="card" >
-		<!-- <a href="/book/<%=book.id%>">	 -->
-		<img class="image" src="<%=book.formats['image/jpeg']%>" class="card-img-top" alt="<%=book.title%>">
-	<!-- </a> -->
-		<div class="card-body">
-			<a class="card-title text-dark" href="/book/<%=book.id%>"><h4><%=book.title%></h4></a>
+		<% searchResponse.results.forEach(book=>{ %>
+		<div class="card">
+			<!-- <a href="/book/<%=book.id%>">	 -->
+			<img class="image" src="<%=book.formats['image/jpeg']%>" class="card-img-top" alt="<%=book.title%>">
+			<!-- </a> -->
+			<div class="card-body">
+				<a class="card-title text-dark" href="/book/<%=book.id%>">
+					<h4><%=book.title%></h4>
+				</a>
 
-			<div class="author">
-				<% book.authors.forEach((author)=>{ %>
+				<div class="author">
+					<% book.authors.forEach((author)=>{ %>
 					<p class="card-text"><%=author.name%></p>
-				<% }) %>
-			</div>
+					<% }) %>
+				</div>
 
-			<div class="tags">
-				<% book.subjects.forEach((tags)=>{ %>
-					
+				<div class="tags">
+					<% book.subjects.forEach((tags)=>{ %>
+
 					<p class="btn btn-primary"><%=tags%></p>
-				<% }) %>
+					<% }) %>
+				</div>
 			</div>
 		</div>
-		</div>
 
 
 
-	<% }) %>
-		</div>
+		<% }) %>
+	</div>
 
 	<!-- pagination  -->
 	<% if (searchResponse.previous) { %>
-		<a href="?page=<%= parseInt(page)-1 %>&query=<%= search %>">Previous</a>
+	<a href="?page=<%= parseInt(page)-1 %>&query=<%= search %>">Previous</a>
 	<% } if(searchResponse.next) { %>
-		<a href="?page=<%= parseInt(page)+1 %>&query=<%= search %>">Next</a>
-	<% } %> 
+	<a href="?page=<%= parseInt(page)+1 %>&query=<%= search %>">Next</a>
+	<% } %>
 	<%- include('includes/footer.ejs') %>
