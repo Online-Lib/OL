@@ -8,8 +8,9 @@
 	<div class="cards-wrapper">
 	<% searchResponse.results.forEach(book=>{ %>
 	<div class="card" >
-		
-		<a href="/book/<%=book.id%>"><img src="<%=book.formats['image/jpeg']%>" class="card-img-top" alt="<%=book.title%>"></a>
+		<!-- <a href="/book/<%=book.id%>">	 -->
+		<img class="image" src="<%=book.formats['image/jpeg']%>" class="card-img-top" alt="<%=book.title%>">
+	<!-- </a> -->
 		<div class="card-body">
 			<a class="card-title text-dark" href="/book/<%=book.id%>"><h4><%=book.title%></h4></a>
 
