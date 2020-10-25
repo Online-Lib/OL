@@ -3,9 +3,11 @@
 
 <body>
 	<%- include('includes/navbar-view-book.ejs') %>
-	<div class="container">
-		<h1>Page for single book</h1>
-		<p><a href="<%= url %>"><%= url %></a></p>
-	</div>
-
+	
+		<iframe 
+			src="<%= url %>" 
+			title="This is a page from Gutenberg blah blah blah (for screenreaders only edit it accordingly...)"
+			style="width: 100%; height: 80vh; border: none;"
+			>
+		</iframe>
 	<%- include('includes/footer.ejs') %>
