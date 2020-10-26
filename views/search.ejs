@@ -5,8 +5,7 @@
 <body>
 	<%- include('includes/navbar.ejs') %>
 
-	<h1>Search results page</h1>
-	<h2>Total results found : <%=searchResponse.count%></h2>
+	<h2>There are <%=searchResponse.count%> books matching your search</h2>
 	<div class="cards-wrapper">
 		<% searchResponse.results.forEach(book=>{ %>
 		<div class="card">
