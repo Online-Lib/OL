@@ -1,28 +1,28 @@
 body {
-    scrollbar-width: 2px;
-    scrollbar-color: grey; 
+  scrollbar-width: 2px;
+  scrollbar-color: grey;
 }
 
 ::-webkit-scrollbar {
-    height: 3px;
-    width: 3px;
+  height: 3px;
+  width: 3px;
 }
 ::-webkit-scrollbar-thumb {
-    background: rgb(104, 85, 85);
-    border-radius: 3px;
+  background: rgb(104, 85, 85);
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-track {
-    background: rgb(175, 175, 243);
+  background: rgb(175, 175, 243);
 }
 
 /* syles for navbar-view-main.ejs */
 .navbar-view-main {
-    background-color: royalblue;
-    height: 10vh;
+  background-color: royalblue;
+  height: 10vh;
 }
 
 /* syles for footer.ejs */
 .footer {
-    background-color: royalblue;
-    height: 10vh;
+  background-color: royalblue;
+  height: 10vh;
 }
