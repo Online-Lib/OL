@@ -63,6 +63,7 @@ body {
   font-size: x-large;
   border: solid transparent;
   border-color: white;
+  color: white;
 }
 
 .search_box::placeholder {
