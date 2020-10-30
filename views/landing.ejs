@@ -1,0 +1,73 @@
+<%- include('includes/head.ejs') %>
+<link rel="stylesheet" href="/css/landing.css">
+<link
+</head>
+<body>
+	<section class="hero">
+		<nav class="navbar">
+			<div class="left">
+					<div class="nav-link-wrapper">
+							<a href="#">Popular Books</a>
+					</div>
+
+					<div class="nav-link-wrapper">
+							<a href="#">Latest</a>
+					</div>
+
+					<div class="nav-link-wrapper">
+							<a href="#">Authors</a>
+					</div>
+
+					<div class="nav-link-wrapper">
+							<a href="#">Languages</a>
+					</div>
+			</div>
+
+			<div class="right">
+					<div class="search_bar">
+							<input
+									type="text"
+									name="search"
+									id="search"
+									class="search_box"
+									placeholder="Search"
+							/>
+					</div>
+					<br />
+					<div class="options">
+							<div class="title">
+									<input type="radio" name="title" id="title" />
+									<label for="title">Title</label>
+							</div>
+							<div class="author">
+									<input type="radio" name="author" id="author" />
+									<label for="author">Author</label>
+							</div>
+							<div class="isbn">
+									<input type="radio" name="isbn" id="isbn" />
+									<label for="isbn">ISBN</label>
+							</div>
+							<div class="genre">
+									<label for="genre">Genre </label>
+									<select name="genre" id="genre">
+											<option value="fiction">Fiction</option>
+											<option value="nonfiction">Non-fiction</option>
+											<option value="sci-fi">Science Fiction</option>
+											<option value="hist-fic">
+													Historical Fiction
+											</option>
+											<option value="mystery">Mystery</option>
+									</select>
+							</div>
+					</div>
+			</div>
+	</nav>
+
+	</section>
+
+	<section>
+
+		favorites etc
+
+	</section>
+	<%- include('includes/footer.ejs') %>
