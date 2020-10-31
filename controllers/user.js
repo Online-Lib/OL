@@ -1,5 +1,9 @@
 const gutendex = require("../api/gutendex")
 
+exports.getLandingPage = (req, res, next) => {
+  res.render("landing", { title: "gutendex" })
+}
+
 exports.getSearch = async (req, res, next) => {
   try {
     const page = req.query.page || 1
