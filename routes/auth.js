@@ -3,8 +3,11 @@ const passport = require("passport")
 const User = require("../models/User")
 
 router.get("/signup", (req, res, next) =>
-  //res.json({ message: 'hi' })
-  next()
+  res.render("signup", { title: "Sign up" })
+)
+
+router.get("/login", (req, res, next) =>
+  res.render("login", { title: "Login" })
 )
 
 router.post("/signup", async (req, res, next) => {
