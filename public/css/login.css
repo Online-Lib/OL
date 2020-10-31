@@ -1,0 +1,10 @@
+.login-wrapper {
+  min-height: 92vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 24px;
+}
