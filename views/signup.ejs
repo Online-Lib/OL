@@ -1,25 +1,29 @@
 <%- include('includes/head.ejs') %>
 <link rel="stylesheet" href="/css/login.css">
 </head>
+
 <body>
 	<section class="login-wrapper">
-		<form class="text-center border border-light p-5" action="#!">
+		<form class="text-center border border-light p-5" action="/signup" method="POST">
 
 			<p class="h4 mb-4">Sign up</p>
-	
+
 			<!-- Email -->
-			<input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
-	
+			<input name="email" type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+
 			<!-- Password -->
-			<input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
-	
+			<input name="password" type="password" id="defaultLoginFormPassword" class="form-control mb-4"
+				placeholder="Password">
+
 			<!-- Sign in button -->
 			<button class="btn btn-info btn-block my-4" type="submit">Register</button>
-	
+
 			<!-- Social login -->
 			<p>or sign up with:</p>
-			<a href="#" class="mx-2" role="button"><img src="/icons/facebook.svg" class="icon" alt="login with facebook"></a>
-			<a href="#" class="mx-2" role="button"><img src="/icons/google.svg" class="icon" alt="login with google"></a>
-	</form>
+			<a href="/auth/facebook" class="mx-2" role="button"><img src="/icons/facebook.svg" class="icon"
+					alt="login with facebook"></a>
+			<a href="/auth/google" class="mx-2" role="button"><img src="/icons/google.svg" class="icon"
+					alt="login with google"></a>
+		</form>
 	</section>
 	<%- include('includes/footer.ejs') %>
