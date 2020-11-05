@@ -6,8 +6,6 @@ const findOrCreate = require("mongoose-findorcreate")
 const userSchema = mongoose.Schema({
   email: {
     type: String,
-    index: true,
-    unique: true,
   },
   username: String,
   password: String,

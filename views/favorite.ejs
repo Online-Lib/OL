@@ -2,14 +2,14 @@
 <link rel="stylesheet" href="/css/cards.css">
 </head>
 
-<body>
-	<%- include('includes/navbar.ejs') %>
-
-	<h2 class="text-center">There are <%=searchResponse.count%> books matching your search</h2>
+<body> 
+    <%- include('includes/navbar.ejs') %>
+    <%if(fav){%>
+    	<h2 class="text-center">Total : <%=books.count%> book(s)</h2>
 	<div class="cards-wrapper">
-		<% searchResponse.results.forEach(book=>{ %>
+        
+		<% books.results.forEach(book=>{ %>
 		<div class="card">
-			<!-- <a href="/book/<%=book.id%>">	 -->
 			<img class="image" src="<%=book.formats['image/jpeg']%>" class="card-img-top" alt="<%=book.title%>">
 			<!-- </a> -->
 			<div class="card-body">
@@ -29,10 +29,11 @@
 					<p class="btn btn-primary"><%=tags%></p>
 					<% }) %>
 				</div>
-				<form action="/favorites" method="POST">
-					<input type="hidden" name="userId" value="<%=user._id%>" />
+                <form action="/removeFavorites" method="POST">
+                    
+                    <input type="hidden" name="userId" value="<%=user._id%>" /> 
 					<input type="hidden" name="bookId" value="<%=book.id%>" />
-					<button type="submit">Add To Favorite</button>
+					<button type="submit">Remove</button>
 				</form>
 			</div>
 		</div>
@@ -40,12 +41,10 @@
 
 
 		<% }) %>
-	</div>
+    </div>
+    <%}else{%>
+        <h1>No Favorite Books</h1>
+<%}%>
 
-	<!-- pagination  -->
-	<% if (searchResponse.previous) { %>
-	<a href="?page=<%= parseInt(page)-1 %>&query=<%= search %>">Previous</a>
-	<% } if(searchResponse.next) { %>
-	<a href="?page=<%= parseInt(page)+1 %>&query=<%= search %>">Next</a>
-	<% } %>
-	<%- include('includes/footer.ejs') %>
+    
+<%- include('includes/footer.ejs') %>
