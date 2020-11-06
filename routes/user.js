@@ -11,4 +11,14 @@ router.get("/secret", ensuredAuthentication, userController.getSearch)
 
 router.get("/book/:id", userController.bookById)
 
+router.get("/favorites", ensuredAuthentication, userController.getFavorite)
+
+router.post("/favorites", ensuredAuthentication, userController.postFavorite)
+
+router.post(
+  "/removeFavorites",
+  ensuredAuthentication,
+  userController.removeFavorites
+)
+
 module.exports = router

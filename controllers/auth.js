@@ -1,5 +1,3 @@
-class AuthController {
-
-}
+class AuthController {}
 
 module.exports = AuthController
