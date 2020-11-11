@@ -21,11 +21,24 @@ exports.getSearch = async (req, res, next) => {
 
     const searchResponse = response.data
 
+    let bookIdInFavourite = [];
+
+    try {
+      const books = await Book.find({ userId: req.user._id })
+      books.forEach(book => {
+        bookIdInFavourite.push(book.bookId)
+        console.log(bookIdInFavourite)
+      })
+    } catch (err) {
+      bookIdInFavourite = []
+    }
+
     res.render("search", {
       title: "Search results",
       searchResponse,
       page,
       search,
+      bookIdInFavourite,
       user: req.user,
     })
   } catch (error) {

@@ -16,9 +16,9 @@ router.get("/favorites", ensuredAuthentication, userController.getFavorite)
 router.post("/favorites", ensuredAuthentication, userController.postFavorite)
 
 router.post(
-  "/removeFavorites",
-  ensuredAuthentication,
-  userController.removeFavorites
+    "/removeFavorites",
+    ensuredAuthentication,
+    userController.removeFavorites
 )
 
 module.exports = router

@@ -1,19 +1,19 @@
 <%- include('includes/head.ejs') %>
 <link rel="stylesheet" href="/css/landing.css">
-<link
-</head>
+<link </head>
+
 <body>
 	<section class="hero">
 		<nav class="navbar">
 			<div class="left">
-					<div class="nav-link-wrapper">
-							<a href="#">Online Library</a>
-					</div>
+				<div class="nav-link-wrapper">
+					<a href="#">Online Library</a>
+				</div>
 
-					<div class="nav-link-wrapper">
-							<a href="/favorites">Favorites</a>
-					</div>
-<!-- 
+				<div class="nav-link-wrapper">
+					<a href="/favorites">Favorites</a>
+				</div>
+				<!-- 
 					<div class="nav-link-wrapper">
 							<a href="#">Authors</a>
 					</div>
@@ -26,17 +26,11 @@
 			<div class="right">
 				<form method="GET" action="/search">
 					<div class="search_bar">
-							<input
-									type="text"
-									name="query"
-									id="search"
-									class="search_box"
-									placeholder="Search"
-							/>
+						<input type="text" name="query" id="search" class="search_box" placeholder="Search" />
 					</div>
 					<br />
 					<div class="options">
-							<!-- <div class="title">
+						<!-- <div class="title">
 									<input type="radio" name="title" id="title" />
 									<label for="title">Title</label>
 							</div>
@@ -48,29 +42,22 @@
 									<input type="radio" name="isbn" id="isbn" />
 									<label for="isbn">ISBN</label>
 							</div> -->
-							<div class="genre">
-									<label for="genre">Genre </label>
-									<select name="genre" id="genre">
-											<option value="">All</option>
-											<option value="fiction">Fiction</option>
-											<option value="nonfiction">Non-fiction</option>
-											<option value="sci-fi">Science Fiction</option>
-											<option value="hist-fic">
-													Historical Fiction
-											</option>
-											<option value="mystery">Mystery</option>
-									</select>
-							</div>
+						<div class="genre">
+							<label for="genre">Genre </label>
+							<select name="genre" id="genre">
+								<option value="">All</option>
+								<option value="fiction">Fiction</option>
+								<option value="nonfiction">Non-fiction</option>
+								<option value="sci-fi">Science Fiction</option>
+								<option value="hist-fic">
+									Historical Fiction
+								</option>
+								<option value="mystery">Mystery</option>
+							</select>
+						</div>
 					</div>
 				</form>
 			</div>
-	</nav>
+		</nav>
 
 	</section>
-
-	<section>
-
-		favorites etc
-
-	</section>
-	<%- include('includes/footer.ejs') %>

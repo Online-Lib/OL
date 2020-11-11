@@ -29,11 +29,17 @@
 					<p class="btn btn-primary"><%=tags%></p>
 					<% }) %>
 				</div>
+				<% if(user){ %>
 				<form action="/favorites" method="POST">
 					<input type="hidden" name="userId" value="<%=user._id%>" />
 					<input type="hidden" name="bookId" value="<%=book.id%>" />
+					<% if(bookIdInFavourite.includes(book.id)){ %>
+					<button>Already on Favourite</button>
+					<% }else{ %>
 					<button type="submit">Add To Favorite</button>
+					<% } %>
 				</form>
+				<% } %>
 			</div>
 		</div>
 

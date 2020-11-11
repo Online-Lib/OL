@@ -5,7 +5,7 @@ body {
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/images/hero.jpg");
-  height: 35vh;
+  height: 100vh;
 
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
