@@ -113,19 +113,36 @@ exports.getFavorite = async (req, res, next) => {
 
 exports.postFavorite = (req, res, next) => {
   const { userId, bookId } = req.body
-  const book = new Book({
-    userId,
-    bookId,
-  })
 
-  book
-    .save()
-    .then(() => {
-      res.redirect("/favorites")
+  let bookIdInFavourite = [];
+
+  try {
+    const books = await Book.find({ userId: req.user._id })
+    books.forEach(book => {
+      bookIdInFavourite.push(book.bookId)
+      console.log(bookIdInFavourite)
     })
-    .catch((err) => {
-      console.log(err)
+  } catch (err) {
+    bookIdInFavourite = []
+  }
+  if (bookById.includes(bookId)) {
+    res.redirect("/favorites")
+  }
+  else {
+    const book = new Book({
+      userId,
+      bookId,
     })
+
+    book
+      .save()
+      .then(() => {
+        res.redirect("/favorites")
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }
 }
 
 exports.removeFavorites = (req, res, next) => {
